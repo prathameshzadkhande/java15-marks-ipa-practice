@@ -1,1 +1,24 @@
+// The code counts the number of lowercase characters in a given input string by iterating through each character and incrementing a counter variable for each lowercase character encountered. 
+// The total count of lowercase characters is then displayed as output.
 
+import java.util.* ;
+
+public class Lowercase{
+   public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
+      String st = sc.nextLine();sc.close();
+      int lchar = 0 ;
+      for (int i = 0 ; i < st.length() ; i++){
+         char ch = st.charAt(i);
+         if (Character.isLowerCase(ch)){
+             lchar++ ; 
+         }
+      }
+    if (lchar  > 0){
+        System.out.println("Total No of Lower case Characters :"+lchar);
+    }else{
+        System.out.println("No Lower case Charcaters in this string");
+    }
+   }
+
+}
